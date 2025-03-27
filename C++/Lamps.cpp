@@ -1,5 +1,5 @@
 #include <iostream>
-
+//Fonts:https://neps.academy/br/exercise/52
 void change(bool& value)
 {
     if(value == false){
