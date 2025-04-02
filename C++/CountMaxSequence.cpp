@@ -15,12 +15,14 @@ int main()
     int guarda;
     int avanca;
 
-    std::vector<int> list(0);
-
     //tamanho da lista
     std::cout<<"Quantos Numeros vai digitar?: ";
     std::cin>>lenght;
-    list.resize(lenght);
+    std::vector<int> list(0);
+    if(lenght != 0)
+    {
+        list.resize(lenght);
+    }
 
     //encher a lista
     for(int i = 0; i < lenght;i++)
@@ -31,8 +33,9 @@ int main()
     }
 
     guarda = list[0];
+
     //pecorrer a lista e marcar os iguais
-    for(int i=0; i<list.size();i++)
+    for(int i=0; i<lenght;i++)
     {
         avanca = list[i];
         
@@ -48,7 +51,6 @@ int main()
             countA++;
             if(countA>countB)countB = countA;
         }
-        
     }
 
     std::cout<<'\n'<<countB<<'\n';
